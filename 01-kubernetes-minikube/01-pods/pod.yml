@@ -1,0 +1,20 @@
+# La versión de la API de Kubernetes que se está utilizando
+apiVersion: v1
+# El tipo de recurso que se está definiendo, en este caso un pod
+kind: Pod
+# Metadatos sobre el pod
+metadata:
+  # El nombre del pod
+  name: mi-pod
+# La especificación del pod
+spec:
+  # Una lista de contenedores que se ejecutarán en el pod
+  containers:
+    # El nombre del contenedor
+    - name: mi-contenedor
+      # La imagen del contenedor
+      image: nginx:latest
+      # Una lista de puertos que se expondrán desde el contenedor
+      ports:
+        # El puerto que se está exponiendo del contenedor
+        - containerPort: 80
