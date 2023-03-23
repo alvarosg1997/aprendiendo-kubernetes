@@ -1,0 +1,13 @@
+apiVersion : v1
+kind: Pod
+metadata:
+  name: nginx-prod
+  labels:
+    app: miweb # identifica el nombre de la aplicacion
+    enviroment: prod # etiqueta que identifica el ambiente de este pod
+spec:
+  containers:
+    - name: miwebcontainer
+      image: nginx:latest
+      ports:
+        - containerPort: 80 #puerto de escuicha del contenedor
