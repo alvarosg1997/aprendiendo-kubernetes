@@ -5,4 +5,3 @@
 Con este programa podemos hacer un cluster de kuberentes de forma local
 de manera que podramos usar nuestro equipo si usar servidores como AWS, y con ello costos 
 de cluster
-;29;0;0;288;1_
