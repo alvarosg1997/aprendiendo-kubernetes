@@ -1,0 +1,20 @@
+# Este es el nombre del ReplicationController
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mi-replication-controller
+# Especifica el número de réplicas del pod que se deben mantener en el cluster
+spec:
+  replicas: 3 #en este caso lanzaremos 3 pod
+# Especifica el contenedor que se ejecutará en cada réplica del pod
+template: #contiene lo mismo que un spec de un pod normal
+  metadata:
+    labels:
+      app: mi-aplicacion
+      tier: prod
+  spec:
+    containers:
+      - name: mi-contenedor
+        image: nginx
+        ports:
+          - containerPort: 80
