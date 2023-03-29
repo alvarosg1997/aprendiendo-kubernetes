@@ -1,6 +1,6 @@
 Un pod de Kubernetes es un conjunto de uno o varios conetenedores de linux y constituye la unidad más pequeña de las aplicaciones de Kubernetes. Puede estar compuesto por un solo contenedor, en un caso de uso común, o por varios con conexión directa, en un caso de uso avanzado.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a14d23d2-d5f0-40cc-8c11-1afe860778b7/Untitled.png)
+![image](https://user-images.githubusercontent.com/75830958/228514343-a7986836-1d64-4919-a581-05fa6fb159c3.png)
 
 ### 1.1 Estructura de un pod
 
