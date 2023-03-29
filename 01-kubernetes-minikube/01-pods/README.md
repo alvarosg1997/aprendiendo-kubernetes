@@ -49,3 +49,39 @@ La estructura básica de un archivo **`pod.yml`** en Kubernetes incluye:
             cpu: "500m" 
             # Límite máximo de CPU
     ```
+### 1.2 Ejemplos
+
+Pod de con la imagen de nginx , el pod se llama : nginx con el puerto 80
+
+```yaml
+# La versión de la API de Kubernetes que se está utilizando
+apiVersion: v1
+# El tipo de recurso que se está definiendo, en este caso un pod
+kind: Pod
+# Metadatos sobre el pod
+metadata:
+  # El nombre del pod
+  name: mi-pod
+# La especificación del pod
+spec:
+  # Una lista de contenedores que se ejecutarán en el pod
+  containers:
+    # El nombre del contenedor
+    - name: mi-contenedor
+      # La imagen del contenedor
+      image: nginx:latest
+      # Una lista de puertos que se expondrán desde el contenedor
+      ports:
+        # El puerto que se está exponiendo del contenedor
+        - containerPort: 80
+
+```
+
+### 1.3 Comandos útiles
+
+```bash
+kubectl get pods -o wide
+```
+
+> Este comando nos dara mas informacion
+> 
