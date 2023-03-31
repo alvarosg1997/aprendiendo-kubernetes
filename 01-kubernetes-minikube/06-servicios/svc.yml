@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: landingpage
+spec:
+  ports:
+  - port: 80 #puerto por el cual va a estar escuchando
+    protocol: TCP
+    targetPort: 80 #puerto ionterno de los contenedores
+  selector:
+    app: webserver #etiqueta que asignara los contenedores que la tengan dicho servicio
