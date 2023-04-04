@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+#nombre del replicaset
+  name: landingpage
+spec:
+  replicas: 1
+  selector:
+# va a ser aplicacdo para el template que tenga la etiqueta app:webserver
+    matchLabels:
+      app: webserver
+  template:
+    metadata:
+      labels:
+        app: webserver
+
+    spec: #y aqui va a las espcificaciones del contenedor que en este caso es nginx
+      containers:
+      - name: nginx
+        image: nginx:latest

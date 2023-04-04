@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mi--segundo-replication-controller
+  name: mi-segundo-replication-controller
   labels:
-    project: nginx2
+    project: nginx
 spec:
   replicas: 3
   selector:
-    project: nginx2
+    project: nginx
   template:
     metadata:
       labels:
         app: mi-aplicacion
         tier: prod
-        project: nginx2
+        project: nginx
     spec:
       containers:
         - name: mi-contenedor
