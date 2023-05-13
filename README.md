@@ -95,3 +95,4 @@ kubectl get pods -o wide
 
 > Este comando nos dara mas informacion
 > 
+### 1.4 replicaset
